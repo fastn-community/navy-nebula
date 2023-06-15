@@ -814,6 +814,7 @@ padding-top.px: 48
 padding-bottom.px: 84
 color: $inherited.colors.text
 padding-horizontal.px: 24
+align-content: center
 
 -- ftd.row:
 link: $footer-mobile.site-url
@@ -843,11 +844,26 @@ site-name: $footer-mobile.site-name
 -- ftd.text: $footer-mobile.copyright
 role: $inherited.types.fine-print
 width: fill-container
+margin-bottom.px: 24
+text-align: center
+
+-- ftd.row:
+align-self: center
+wrap: true
+margin-bottom.px: 54
+
+-- footer-list: $obj.title
+url: $obj.url
+is-last: $obj.is-last
+$loop$: $footer-mobile.footer-links as $obj
+
+-- end: ftd.row
 
 -- ftd.row:
 spacing.fixed.px: 24
 margin-left.px: 48
 align-self: center
+wrap: true
 
 -- image-list:
 $loop$: $footer-mobile.social-links as $obj
