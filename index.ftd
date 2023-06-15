@@ -1,40 +1,1602 @@
--- my-ds.page: Welcome to doc-site
+-- import: fastn-community.github.io/navy-nebula/common
+-- import: fastn/processors as pr
+-- import: fastn-community.github.io/navy-nebula/blog-articles/sample-post
 
 
-⚡️ `doc-site` will help you create a beautiful documentation site in no time.
-
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
-
-[Click here](https://fastn-community.github.io/doc-site/) to read doc-site
-documentation.
-
--- ds.h3: 🚀 Fast Track 
-
-Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
-project in just 5 minutes!
-
--- ds.h3: 🌟 Whats next?
-
-Create your first page. 
-[Click here to know more](https://fastn-community.github.io/doc-site/page/).
-
--- ds.h3: 👀 Want to learn more?
-
-Feel free to check [our expander course](https://fastn.com/expander/) or jump
-into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
 
--- ds.h3: 🎯 Used by?
 
-Our all documentation sites uses this `doc-site` theme.
 
-- [fastn.com](https://fastn.com/home/)
-- [FifthTry.com](https://www.fifthtry.com/)
+-- my-ds.page:
+full-width: true
+sidebar: false
+blog: true
 
--- ds.h2: Learn fastn and become a pro?
+-- featured-post:
+post-data: $sample-post.meta
+cta-primary: Read more
+cta-primary-url: blog-articles/sample-post/
 
-You are one click away, just check [our documentation](https://fastn.com/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- posts: Must Read Articles
+
+-- post-article:
+post-data: $sample-post.meta
+
+-- post-article:
+post-data: $sample-post.meta-1
+
+-- post-article:
+post-data: $sample-post.meta
+
+-- post-article:
+post-data: $sample-post.meta-1
+
+-- post-article:
+post-data: $sample-post.meta
+
+-- post-article:
+post-data: $sample-post.meta-1
+
+-- end: posts
+
+-- search-card: Subscribe
+help-info: Sign up in 2 minutes
 
 -- end: my-ds.page
+
+
+
+
+
+
+
+
+
+
+-- component featured-post:
+common.post-meta post-data:
+optional string cta-primary: 
+optional string cta-primary-url:
+optional string cta-secondary: 
+optional string cta-secondary-url:
+optional string info:
+common.tags-list list tags: $common.tag
+
+-- ftd.column:
+width: fill-container
+
+-- featured-post-card: $featured-post.post-data.title
+timestamp: $featured-post.post-data.published-on
+author: $featured-post.post-data.author
+image: $featured-post.post-data.post-image
+url: $featured-post.post-data.post-url
+body: $featured-post.post-data.body
+info: $featured-post.info
+cta-primary: $featured-post.cta-primary
+cta-primary-url: $featured-post.cta-primary-url
+cta-secondary: $featured-post.cta-secondary
+cta-secondary-url: $featured-post.cta-secondary-url
+tags: $featured-post.post-data.tags
+
+-- end: ftd.column
+
+-- end: featured-post
+
+
+
+
+
+
+
+
+
+
+-- component featured-post-card:
+caption title:
+string timestamp:
+common.author-meta author:
+ftd.image-src image:
+string url:
+optional body body:
+optional string info: 
+optional string cta-primary: 
+optional string cta-primary-url:
+optional string cta-secondary: 
+optional string cta-secondary-url:
+common.tags-list list tags: $common.tag
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- featured-post-card-desktop: $featured-post-card.title
+timestamp: $featured-post-card.timestamp
+author: $featured-post-card.author
+image: $featured-post-card.image
+url: $featured-post-card.url
+body: $featured-post-card.body
+info: $featured-post-card.info
+cta-primary: $featured-post-card.cta-primary
+cta-primary-url: $featured-post-card.cta-primary-url
+cta-secondary: $featured-post-card.cta-secondary
+cta-secondary-url: $featured-post-card.cta-secondary-url
+tags: $featured-post-card.tags
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- featured-post-card-mobile: $featured-post-card.title
+timestamp: $featured-post-card.timestamp
+author: $featured-post-card.author
+image: $featured-post-card.image
+url: $featured-post-card.url
+body: $featured-post-card.body
+info: $featured-post-card.info
+cta-primary: $featured-post-card.cta-primary
+cta-primary-url: $featured-post-card.cta-primary-url
+cta-secondary: $featured-post-card.cta-secondary
+cta-secondary-url: $featured-post-card.cta-secondary-url
+tags: $featured-post-card.tags
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: featured-post-card
+
+
+
+
+
+
+
+
+
+
+-- component featured-post-card-desktop:
+caption title:
+string timestamp:
+common.author-meta author:
+ftd.image-src image:
+string url:
+optional body body:
+optional string info: 
+optional string cta-primary: 
+optional string cta-primary-url:
+optional string cta-secondary: 
+optional string cta-secondary-url:
+boolean $hover: false
+common.tags-list list tags: $common.tag
+
+-- ftd.row:
+width: fill-container
+padding-vertical.px: 24
+padding-horizontal.px: 24
+height.fixed.px: 450
+margin-bottom.px: 100
+$on-mouse-enter$: $ftd.set-bool($a = $featured-post-card-desktop.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $featured-post-card-desktop.hover, v = false)
+background.solid if { featured-post-card-desktop.hover }: $inherited.colors.background.step-1
+border-radius.px: 20
+
+-- ftd.column:
+align-self: center
+width.fixed.percent: 55
+margin-right.px: 32
+color: $inherited.colors.text
+role: $inherited.types.heading-tiny
+
+-- ftd.text: $obj.title
+link: $obj.tag-link
+$loop$: $featured-post-card-desktop.tags as $obj
+style: light
+color: $inherited.colors.text
+
+-- ftd.text: $featured-post-card-desktop.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+style: medium
+link: $featured-post-card-desktop.url
+margin-vertical.px: 12
+
+-- ftd.text:
+if: { featured-post-card-desktop.body != NULL }
+role: $inherited.types.copy-regular
+margin-vertical.px: 8
+style: light
+
+$featured-post-card-desktop.body
+
+-- ftd.text: $featured-post-card-desktop.timestamp
+style: light
+margin-top.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 45
+height: fill-container
+link: $featured-post-card-desktop.url
+border-radius.px: 20
+
+-- ftd.image: 
+src: $featured-post-card-desktop.image
+width: fill-container
+height: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: featured-post-card-desktop
+
+
+
+
+
+
+
+
+
+
+-- component featured-post-card-mobile:
+caption title:
+string timestamp:
+common.author-meta author:
+ftd.image-src image:
+string url:
+optional body body:
+optional string info: 
+optional string cta-primary: 
+optional string cta-primary-url:
+optional string cta-secondary: 
+optional string cta-secondary-url:
+boolean $mouse-in: false
+string posted-on: Posted on
+common.tags-list list tags: $common.tag
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+padding-vertical.px: 32
+margin-bottom.px: 64
+margin-top.px: 32
+color: $inherited.colors.text
+
+-- ftd.image: 
+src: $featured-post-card-mobile.image
+width: fill-container
+link: $featured-post-card-mobile.url
+
+-- ftd.text: $obj.title
+role: $inherited.types.copy-regular
+link: $obj.tag-link
+$loop$: $featured-post-card-mobile.tags as $obj
+style: light
+color: $inherited.colors.text
+
+-- ftd.text: $featured-post-card-mobile.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { featured-post-card-mobile.body != NULL }
+role: $inherited.types.copy-regular
+
+$featured-post-card-mobile.body
+
+-- ftd.row:
+spacing.fixed.px: 5
+role: $inherited.types.copy-small
+
+-- ftd.text: $featured-post-card-mobile.posted-on
+
+-- ftd.text: $featured-post-card-mobile.timestamp
+
+-- end: ftd.row
+
+-- ftd.row:
+border-bottom-width.px: 1
+border-color: $inherited.colors.text-strong
+width.fixed.percent if { !featured-post-card-mobile.mouse-in} : 10
+width.fixed.percent if { featured-post-card-mobile.mouse-in} : 20
+padding-bottom.px: 4
+link if { featured-post-card-mobile.cta-primary != NULL }: $featured-post-card-mobile.cta-primary-url
+
+-- ftd.text: $featured-post-card-mobile.cta-primary
+role: $inherited.types.link
+white-space: nowrap
+color: $inherited.colors.text-strong
+$on-mouse-enter$: $ftd.set-bool($a = $featured-post-card-mobile.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $featured-post-card-mobile.mouse-in, v = false)
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: featured-post-card-mobile
+
+
+
+
+
+
+
+
+
+
+-- component post-article:
+common.post-meta post-data:
+
+-- post-article-ui: $post-article.post-data.title
+timestamp: $post-article.post-data.published-on
+image: $post-article.post-data.post-image
+link:  $post-article.post-data.post-url
+body: $post-article.post-data.body
+author: $post-article.post-data.author
+tags: $post-article.post-data.tags
+
+-- end: post-article
+
+
+
+
+
+
+
+
+
+
+-- component post-article-ui:
+caption title:
+string timestamp:
+ftd.image-src image: 
+string link:
+body body:
+optional common.author-meta author:
+common.tags-list list tags:
+string posted-on: Posted on
+string written-by: By
+
+-- ftd.column:
+
+-- ftd.desktop:
+
+-- post-article-ui-desktop: $post-article-ui.title
+timestamp: $post-article-ui.timestamp
+image: $post-article-ui.image
+link:  $post-article-ui.link
+body: $post-article-ui.body
+author: $post-article-ui.author
+tags: $post-article-ui.tags
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- post-article-ui-mobile: $post-article-ui.title
+timestamp: $post-article-ui.timestamp
+image: $post-article-ui.image
+link:  $post-article-ui.link
+body: $post-article-ui.body
+author: $post-article-ui.author
+tags: $post-article-ui.tags
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: post-article-ui
+
+
+
+
+
+
+
+
+
+
+-- component post-article-ui-desktop:
+caption title:
+string timestamp:
+ftd.image-src image: 
+string link:
+body body:
+optional common.author-meta author:
+common.tags-list list tags:
+string posted-on: Posted on
+string written-by: By
+boolean $hover: false
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 36
+color: $inherited.colors.text
+role: $inherited.types.label-small
+padding-vertical.px: 24
+padding-horizontal.px: 24
+$on-mouse-enter$: $ftd.set-bool($a = $post-article-ui-desktop.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $post-article-ui-desktop.hover, v = false)
+background.solid if { post-article-ui-desktop.hover }: $inherited.colors.background.step-1
+border-radius.px: 20
+
+-- ftd.column:
+width.fixed.percent: 60
+margin-right.px: 24
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $obj.title
+role: $inherited.types.copy-regular
+link: $obj.tag-link
+$loop$: $post-article-ui-desktop.tags as $obj
+style: light
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.text: $post-article-ui-desktop.title
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-large
+link: $post-article-ui-desktop.link
+margin-vertical.px: 16
+
+-- ftd.text:
+if: { post-article-ui-desktop.body != NULL }
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+link: $post-article-ui-desktop.link
+style: light
+margin-bottom.px: 16
+
+$post-article-ui-desktop.body
+
+-- ftd.text: $post-article-ui-desktop.timestamp
+margin-top.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 40
+
+-- ftd.image:
+src: $post-article-ui-desktop.image
+height: fill-container
+width: fill-container
+link: $post-article-ui-desktop.link
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: post-article-ui-desktop
+
+
+
+
+
+
+
+
+
+
+-- component post-article-ui-mobile:
+caption title:
+string timestamp:
+ftd.image-src image: 
+string link:
+body body:
+optional common.author-meta author:
+common.tags-list list tags:
+string posted-on: Posted on
+string written-by: By
+
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+role: $inherited.types.label-small
+margin-bottom.px: 24
+
+-- ftd.image:
+src: $post-article-ui-mobile.image
+height: auto
+width: fill-container
+link: $post-article-ui-mobile.link
+margin-bottom.px: 12
+
+-- ftd.text: $obj.title
+role: $inherited.types.copy-regular
+link: $obj.tag-link
+$loop$: $post-article-ui-mobile.tags as $obj
+style: light
+color: $inherited.colors.text
+margin-bottom.px: 12
+
+-- ftd.text: $post-article-ui-mobile.title
+role: $inherited.types.heading-small
+link: $post-article-ui-mobile.link
+color: $inherited.colors.text-strong
+style: semi-bold
+margin-bottom.px: 16
+
+-- ftd.row:
+spacing.fixed.px: 6
+margin-bottom.px: 8
+
+-- ftd.text: $post-article-ui-mobile.written-by
+
+-- ftd.text: $post-article-ui-mobile.author.title
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 6
+
+-- ftd.text: $post-article-ui-mobile.posted-on
+
+-- ftd.text: $post-article-ui-mobile.timestamp
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: post-article-ui-mobile
+
+
+
+
+
+
+
+
+
+
+-- component posts:
+optional caption title:
+optional body body:
+children container:
+common.tags-list list topics:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $posts.title
+if: { posts.title != NULL }
+max-width.fixed.px: 800
+width: fill-container
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+margin-bottom.px: 40
+
+-- ftd.column:
+width: fill-container
+children: $posts.container
+spacing.fixed.px: 12
+spacing.fixed.px if { ftd.device == "mobile" }: 32
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: posts
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+string copyright: Copyright ©2022. Fastn Inc.
+optional ftd.image-src site-logo: 
+integer logo-width: $common.logo-width
+integer logo-height: $common.logo-height
+optional string site-url: $common.site-url
+optional string site-name: 
+common.footer-toc list footer-links: $common.footer-list
+optional body body:
+common.social-media list social-links: $common.social-links
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- footer-desktop:
+copyright: $footer.copyright
+site-logo: $footer.site-logo
+logo-width: $footer.logo-width
+logo-height: $footer.logo-height
+site-url: $footer.site-url
+site-name: $footer.site-name
+footer-links: $footer.footer-links
+social-links: $footer.social-links
+body: $footer.body
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- footer-mobile:
+copyright: $footer.copyright
+site-logo: $footer.site-logo
+logo-width: $footer.logo-width
+logo-height: $footer.logo-height
+site-url: $footer.site-url
+site-name: $footer.site-name
+footer-links: $footer.footer-links
+social-links: $footer.social-links
+body: $footer.body
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+
+
+
+-- component footer-desktop:
+optional body body: 
+string copyright:
+optional ftd.image-src site-logo: 
+integer logo-width: 
+integer logo-height: 
+optional string site-url: 
+optional string site-name:
+common.footer-toc list footer-links: 
+common.social-media list social-links: $common.social-links
+
+-- ftd.row:
+border-color: $inherited.colors.border
+border-top-width.px: 1
+width: fill-container
+height.fixed.px: 180
+align-content: center
+color: $inherited.colors.text-strong
+
+-- ftd.row:
+align-self: center
+width.fixed.percent: 90
+
+-- ftd.row:
+link: $footer-desktop.site-url
+align-self: center
+margin-right.px: 64
+
+-- ftd.image:
+if: { footer-desktop.site-logo != NULL }
+src: $footer-desktop.site-logo
+width.fixed.px: $footer-desktop.logo-width
+height.fixed.px: $footer-desktop.logo-height
+
+-- ftd.text: $footer-desktop.site-name
+if: { footer-desktop.site-name != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+white-space: nowrap
+
+-- fallback-title:
+if: { footer-desktop.site-logo == NULL }
+site-name: $footer-desktop.site-name
+
+-- end: ftd.row
+
+-- ftd.text: $footer-desktop.copyright
+role: $inherited.types.copy-small
+align-self: center
+margin-right.px: 24
+
+-- footer-list: $obj.title
+url: $obj.url
+is-last: $obj.is-last
+$loop$: $footer-desktop.footer-links as $obj
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 24
+margin-left.px: 48
+align-self: center
+
+-- image-list:
+$loop$: $footer-desktop.social-links as $obj
+image: $obj.src
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: footer-desktop
+
+
+
+
+
+
+
+
+
+
+-- component image-list:
+ftd.image-src image:
+string link:
+
+-- ftd.row:
+border-radius.px: 100
+background.solid: $inherited.colors.text-strong
+padding-vertical.px: 12
+padding-horizontal.px: 12
+align-self: center
+cursor: pointer
+
+-- ftd.image:
+src: $image-list.image
+width.fixed.px: 24
+height.fixed.px: 24
+align-self: center
+
+-- end: ftd.row
+
+-- end: image-list
+
+
+
+
+
+
+
+
+
+
+-- component footer-list:
+caption title:
+optional string url:
+boolean is-last:
+
+-- ftd.column:
+spacing.fixed.px: 6
+margin-left.px: 18
+align-self: center
+
+-- ftd.text: $footer-list.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+link: $footer-list.url
+width: fill-container
+border-left-width.px if {footer-list.is-last} : 1
+border-color: $inherited.colors.text 
+padding-left.px: 18
+
+-- end: ftd.column
+
+-- end: footer-list
+
+
+
+
+
+
+
+
+
+
+
+-- component footer-mobile:
+optional body body:
+string copyright: 
+optional ftd.image-src site-logo: 
+integer logo-width: 
+integer logo-height:
+optional string site-url: 
+optional string site-name: 
+common.footer-toc list footer-links: 
+common.social-media list social-links:
+
+-- ftd.column:
+width: fill-container
+padding-top.px: 48
+padding-bottom.px: 84
+color: $inherited.colors.text
+padding-horizontal.px: 24
+
+-- ftd.row:
+link: $footer-mobile.site-url
+align-content: center
+margin-vertical.px: 24
+
+-- ftd.image:
+if: { footer-mobile.site-logo != NULL }
+src: $footer-mobile.site-logo
+width.fixed.px: $footer-mobile.logo-width
+height.fixed.px: $footer-mobile.logo-height
+align-self: center
+
+-- ftd.text: $footer-mobile.site-name
+if: { footer-mobile.site-name != NULL }
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+white-space: nowrap
+align-self: center
+
+-- fallback-title:
+if: { footer-mobile.site-logo == NULL }
+site-name: $footer-mobile.site-name
+
+-- end: ftd.row
+
+-- ftd.text: $footer-mobile.copyright
+role: $inherited.types.fine-print
+width: fill-container
+
+-- ftd.row:
+spacing.fixed.px: 24
+margin-left.px: 48
+align-self: center
+
+-- image-list:
+$loop$: $footer-mobile.social-links as $obj
+image: $obj.src
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: footer-mobile
+
+
+
+
+
+
+
+
+
+
+-- component fallback-title:
+optional string site-name:
+
+-- ftd.row:
+
+-- ftd.text: LOGO
+if: { fallback-title.site-name == NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- end: fallback-title
+
+
+
+
+
+
+
+
+
+
+-- component post:
+common.post-meta meta:
+children container:
+optional boolean sidebar: false
+string share-txt: Share
+ftd.ui list right-sidebar:
+
+-- ftd.column:
+width: fill-container
+
+-- article-card: $post.meta.title
+image: $post.meta.post-image
+author: $post.meta.author
+timestamp: $post.meta.published-on
+tags: $post.meta.tags
+container: $post.container
+sidebar: $post.sidebar
+right-sidebar: $post.right-sidebar
+
+$post.meta.body
+
+-- end: ftd.column
+
+-- end: post
+
+
+
+
+
+
+
+
+
+
+-- component article-card:
+caption title:
+optional ftd.image-src image:
+common.author-meta author:
+string timestamp:
+optional body body:
+children container:
+optional boolean sidebar: false
+ftd.ui list right-sidebar:
+common.tags-list list tags: $common.tag
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- article-card-desktop: $article-card.title
+image: $article-card.image
+author: $article-card.author
+timestamp: $article-card.timestamp
+body: $article-card.body
+tags: $article-card.tags
+container: $article-card.container
+sidebar: $article-card.sidebar
+right-sidebar: $article-card.right-sidebar
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- article-card-mobile: $article-card.title
+image: $article-card.image
+author: $article-card.author
+timestamp: $article-card.timestamp
+body: $article-card.body
+container: $article-card.container
+sidebar: $article-card.sidebar
+right-sidebar: $article-card.right-sidebar
+tags: $article-card.tags
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: article-card
+
+
+
+
+
+
+
+
+
+
+-- component article-card-desktop:
+caption title:
+optional ftd.image-src image:
+common.author-meta author:
+string timestamp:
+optional body body:
+children container:
+optional boolean sidebar: false
+ftd.ui list right-sidebar:
+string written-by: Authored by
+string posted-on: Posted on
+common.tags-list list tags:
+
+-- ftd.row:
+color: $inherited.colors.text
+width: fill-container
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 12
+
+-- ftd.column:
+max-width.fixed.percent: 75
+width: fill-container
+margin-right.px: 48
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $obj.title
+role: $inherited.types.heading-tiny
+link: $obj.tag-link
+$loop$: $article-card-desktop.tags as $obj
+color: $inherited.colors.text
+style: light
+
+-- end: ftd.row
+
+-- ftd.text: $article-card-desktop.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+margin-bottom.px: 32
+
+-- ftd.text: $article-card-desktop.timestamp
+role: $inherited.types.heading-tiny
+style: light
+margin-bottom.px: 40
+
+-- ftd.text:
+if: { article-card-desktop.body != NULL }
+role: $inherited.types.copy-regular
+margin-bottom.px: 40
+style: light
+
+$article-card-desktop.body
+
+-- ftd.image:
+if: { article-card-desktop.image != NULL }
+src: $article-card-desktop.image
+width: fill-container
+height: hug-content
+margin-bottom.px: 48
+border-radius.px: 32
+
+-- ftd.column:
+children: $article-card-desktop.container
+width: fill-container
+spacing.fixed.px: 32
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.percent: 25
+spacing: space-between
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 8
+padding-vertical.px: 20
+padding-horizontal.px: 8
+width: fill-container
+align-content: center
+link if { article-card-desktop.author.bio-url != NULL }: $article-card-desktop.author.bio-url
+color: $inherited.colors.text-strong
+margin-bottom.px: 40
+
+-- ftd.text: $article-card-desktop.written-by
+role: $inherited.types.copy-small
+white-space: nowrap
+margin-bottom.px: 18
+
+-- ftd.image:
+if: { article-card-desktop.author.image != NULL }
+src: $article-card-desktop.author.image
+margin-bottom.px: 18
+border-radius.px: 100
+width.fixed.px: 90
+height: auto
+
+-- ftd.text: $article-card-desktop.author.title
+role: $inherited.types.copy-regular
+white-space: nowrap
+
+-- ftd.text: $article-card-desktop.author.profile
+role: $inherited.types.copy-small
+white-space: nowrap
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { article-card-desktop.sidebar }
+children: $article-card-desktop.right-sidebar
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: article-card-desktop
+
+
+
+
+
+
+
+
+
+
+-- component article-card-mobile:
+caption title:
+optional ftd.image-src image:
+common.author-meta author:
+string timestamp:
+optional body body:
+children container:
+optional boolean sidebar: false
+ftd.ui list right-sidebar:
+string written-by: Written by
+string posted-on: Posted on
+common.tags-list list tags: $common.tag
+
+-- ftd.column:
+color: $inherited.colors.text
+role: $inherited.types.copy-large
+width: fill-container
+spacing.fixed.px: 24
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $obj.title
+role: $inherited.types.heading-tiny
+link: $obj.tag-link
+$loop$: $article-card-mobile.tags as $obj
+color: $inherited.colors.text
+style: light
+
+-- end: ftd.row
+
+-- ftd.text: $article-card-mobile.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 12
+
+-- ftd.text: $article-card-mobile.posted-on
+
+-- ftd.text: $article-card-mobile.timestamp
+
+-- end: ftd.row
+
+-- ftd.image:
+if: { article-card-mobile.image != NULL}
+src: $article-card-mobile.image
+width: fill-container
+height: hug-content
+border-radius.px: 10
+
+-- ftd.text:
+if: { article-card-mobile.body != NULL }
+width: fill-container
+
+$article-card-mobile.body
+
+-- ftd.column:
+children: $article-card-mobile.container
+width: fill-container
+spacing.fixed.px: 24
+
+-- end: ftd.column
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 8
+padding-vertical.px: 20
+padding-horizontal.px: 8
+width: fill-container
+align-content: center
+link if { article-card-mobile.author.bio-url != NULL }: $article-card-mobile.author.bio-url
+color: $inherited.colors.text-strong
+margin-top.px if { ftd.device == "mobile" }: 40
+margin-bottom.px: 40
+
+-- ftd.text: $article-card-mobile.written-by
+role: $inherited.types.copy-small
+white-space: nowrap
+margin-bottom.px: 18
+
+-- ftd.image:
+if: { article-card-mobile.author.image != NULL }
+src: $article-card-mobile.author.image
+margin-bottom.px: 18
+border-radius.px: 100
+width.fixed.px: 90
+height: auto
+
+-- ftd.text: $article-card-mobile.author.title
+role: $inherited.types.copy-regular
+white-space: nowrap
+
+-- ftd.text: $article-card-mobile.author.profile
+role: $inherited.types.copy-small
+white-space: nowrap
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { article-card-mobile.sidebar }
+children: $article-card-mobile.right-sidebar
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: article-card-mobile
+
+
+
+
+
+
+
+
+
+
+-- component post-card:
+common.post-meta post-data:
+
+-- post-card-ui: $post-card.post-data.title
+timestamp: $post-card.post-data.published-on
+image: $post-card.post-data.post-image
+author: $post-card.post-data.author
+url: $post-card.post-data.post-url
+body: $post-card.post-data.body
+tags: $post-card.post-data.tags
+
+-- end: post-card
+
+
+
+
+
+
+
+
+
+
+-- component post-card-ui:
+caption title:
+string timestamp:
+common.author-meta author:
+ftd.image-src image:
+string url:
+optional body body:
+string cta-txt: Read More
+common.tags-list list tags: $common.tag
+boolean $hover: false
+string written-by: By
+string posted-on: on
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 22
+$on-mouse-enter$: $ftd.set-bool($a = $post-card-ui.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $post-card-ui.hover, v = false)
+background.solid if { post-card-ui.hover }: $inherited.colors.background.step-1
+border-width.px: 1
+border-radius.px: 12
+padding-vertical.px: 24
+padding-horizontal.px: 24
+border-color: $inherited.colors.text
+color: $inherited.colors.text
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $obj.title
+role: $inherited.types.copy-regular
+link: $obj.tag-link
+$loop$: $post-card-ui.tags as $obj
+style: light
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.text: $post-card-ui.title
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-large
+style: medium
+margin-top.px: 8
+link: $post-card-ui.url
+
+-- ftd.text: $post-card-ui.timestamp
+role: $inherited.types.copy-regular
+style: light
+
+-- ftd.image:
+if: { post-card-ui.image != NULL}
+src: $post-card-ui.image
+width: fill-container
+height: hug-content
+margin-top.px: 24
+border-radius.px: 12
+
+-- end: ftd.column
+
+-- end: post-card-ui
+
+
+
+
+
+
+
+
+
+
+-- component search-card: 
+caption title:
+string cta-primary: Subscribe
+string cta-primary-link: index.html
+optional body body:
+string input-placeholder: Enter your email...
+optional string help-info:
+boolean $hover: false
+
+-- ftd.column:
+width: fill-container
+align-content: center
+padding-top.px: 32
+padding-bottom.px: 64
+margin-vertical.px: 32
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 20
+color: $inherited.colors.text-strong
+
+-- ftd.text: $search-card.title
+role: $inherited.types.heading-large
+margin-top.px: 18
+max-width.fixed.percent: 50
+text-align: center
+
+-- ftd.text: $search-card.help-info
+if: { search-card.help-info != NULL }
+role: $inherited.types.copy-large
+margin-vertical.px: 8
+
+-- ftd.row:
+if: { ftd.device != "mobile" }
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ftd.text-input:
+placeholder: $search-card.input-placeholder
+padding-vertical.px: 16
+padding-horizontal.px: 32
+border-radius.px: 30
+width.fixed.px: 280
+role: $inherited.types.link
+
+-- ftd.text: $search-card.cta-primary
+role: $inherited.types.link
+min-width.fixed.px: 87
+text-align: center
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-primary.base
+padding-vertical.px: 16
+padding-horizontal.px: 24
+link if { search-card.cta-primary-link != NULL }: $search-card.cta-primary-link
+border-radius.px: 50
+white-space: nowrap
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+spacing.fixed.px: 24
+margin-top.px: 24
+align-content: center
+
+-- ftd.text-input:
+placeholder: $search-card.input-placeholder
+padding-vertical.px: 16
+padding-horizontal.px: 32
+border-radius.px: 30
+width.fixed.px: 280
+role: $inherited.types.link
+
+-- ftd.text: $search-card.cta-primary
+role: $inherited.types.link
+min-width.fixed.px: 188
+text-align: center
+color: $inherited.colors.text-strong
+background.solid: $inherited.colors.cta-primary.base
+padding-vertical.px: 16
+padding-horizontal.px: 24
+link if { search-card.cta-primary-link != NULL }: $search-card.cta-primary-link
+border-radius.px: 50
+white-space: nowrap
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: search-card
+
+
+
+
+
+
+
+
+
+
+-- component author-bio:
+common.author-meta author:
+
+-- ftd.column:
+
+-- author-bio-card: $author-bio.author.title
+profile: $author-bio.author.profile
+company: $author-bio.author.company
+avatar: $author-bio.author.image
+
+$author-bio.author.body
+
+-- end: ftd.column
+
+-- end: author-bio
+
+
+
+
+
+
+
+
+
+
+-- component author-bio-card:
+caption title:
+string profile:
+optional string company:
+optional ftd.image-src avatar:
+body body:
+
+-- ftd.column:
+
+-- ftd.desktop:
+
+-- author-bio-desktop: $author-bio-card.title
+profile: $author-bio-card.profile
+company: $author-bio-card.company
+avatar: $author-bio-card.avatar
+body: $author-bio-card.body
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- author-bio-mobile: $author-bio-card.title
+profile: $author-bio-card.profile
+company: $author-bio-card.company
+avatar: $author-bio-card.avatar
+body: $author-bio-card.body
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: author-bio-card
+
+
+
+
+
+
+
+
+
+
+-- component author-bio-desktop:
+caption title:
+string profile:
+optional string company:
+optional ftd.image-src avatar:
+body body:
+
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+spacing.fixed.px: 12
+margin-vertical.px: 12
+margin-horizontal.px: 12
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+
+-- ftd.column:
+width.fixed.px: 152
+
+-- ftd.image:
+if: { author-bio-desktop.avatar != NULL }
+src: $author-bio-desktop.avatar
+width: fill-container
+height: fill-container
+border-radius.px: 500
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+role: $inherited.types.copy-small
+
+-- ftd.text: $author-bio-desktop.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+margin-bottom.px: 16
+
+-- ftd.text: $author-bio-desktop.profile
+margin-bottom.px: 8
+
+-- ftd.text: $author-bio-desktop.company
+if: { author-bio-desktop.company != NULL }
+margin-bottom.px: 8
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+width: fill-container
+
+$author-bio-desktop.body
+
+-- end: ftd.column
+
+-- end: author-bio-desktop
+
+
+
+
+
+
+
+
+
+
+-- component author-bio-mobile:
+caption title:
+string profile:
+optional string company:
+optional ftd.image-src avatar:
+body body:
+
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+spacing.fixed.px: 16
+margin-top.px: 12
+margin-bottom.px: 12
+align-content: center
+
+-- ftd.image:
+src: $author-bio-mobile.avatar
+width.fixed.px: 132
+height.fixed.px: 132
+border-radius.px: 100
+
+-- ftd.column:
+role: $inherited.types.copy-small
+align-content: center
+
+-- ftd.text: $author-bio-mobile.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+
+-- ftd.text: $author-bio-mobile.profile
+
+-- ftd.text: $author-bio-mobile.company
+
+-- end: ftd.column
+
+-- ftd.text:
+text: $author-bio-mobile.body
+role: $inherited.types.fine-print
+
+-- end: ftd.column
+
+-- end: author-bio-mobile
+

@@ -1,0 +1,116 @@
+-- import: fastn/processors as pr
+
+
+-- integer logo-width: 180
+
+-- integer logo-height: 44
+
+-- string site-name: Navy Nebula
+
+-- string site-url: index.html
+
+-- ftd.image-src site-logo: $assets.files.static.ipsum-logo.svg
+
+
+
+
+
+-- pr.sitemap-data full-sitemap:
+$processor$: pr.full-sitemap
+
+
+
+
+
+-- record social-media:
+ftd.image-src src:
+string link: /
+
+-- social-media list share:
+
+
+
+
+
+-- record tags-list:
+caption title:
+string tag-link:
+
+-- tags-list list tag:
+
+-- tags-list list topic:
+
+-- tags-list: Design Inspiration
+tag-link: blog/
+
+-- end: topic
+
+
+
+
+
+-- record author-meta:
+caption title:
+string profile:
+string company:
+optional string bio-url:
+optional ftd.image-src image:
+body body:
+
+
+
+
+
+-- social-media list social-links:
+
+-- social-media:
+link: /
+src: $assets.files.static.discord.svg
+
+-- social-media: 
+link: /
+src: $assets.files.static.icon-github.svg
+
+-- social-media:
+link: /
+src: $assets.files.static.twitter.svg
+
+-- social-media: 
+link: /
+src: $assets.files.static.facebook.svg
+
+-- end: social-links
+
+
+
+
+
+-- record post-meta:
+caption title:
+string published-on:
+optional ftd.image-src post-image:
+optional body body:
+string post-url:
+author-meta author:
+social-media list social-list:
+tags-list list tags:
+
+
+
+
+
+-- record footer-toc:
+caption title:
+string url:
+boolean is-last: false
+
+-- footer-toc list footer-list:
+
+-- footer-toc: Terms of Service
+url: index.html
+
+-- footer-toc: Privacy & Data
+url: index.html
+is-last: true
+
+-- end: footer-list
