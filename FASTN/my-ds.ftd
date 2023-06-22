@@ -1,5 +1,6 @@
 -- import: ds
--- import: ds/common
+-- import: fastn-community.github.io/navy-nebula/common
+-- import: fastn-community.github.io/navy-nebula as bgt
 -- import: fastn-community.github.io/footer
 
 ;; ********* my-ds document **********
@@ -16,30 +17,41 @@ ftd.ui list right-sidebar:
 optional string document-title:
 optional string document-description:
 optional ftd.raw-image-src document-image:
+optional string site-name: NULL
+ftd.image-src site-logo: $common.site-logo 
+optional string site-url: $common.site-url
+boolean full-width: false
+boolean blog: false
+ftd.ui list hero:
 
 -- ds.page: $page.title
-site-name: my-fastn
-site-url: index.html
-site-logo: $site-logo
+site-logo: $page.site-logo
+site-url: $page.site-url
 body: $page.body
 show-footer: true
 right-sidebar: $page.right-sidebar
 sidebar: $page.sidebar
+full-width: $page.full-width
 document-title: $page.document-title
 document-description: $page.document-description
 document-image: $page.document-image
-github-url: https://github.com/fastn-community/doc-site/
+blog: $page.blog
+hero: $page.hero
+github-url: https://github.com/fastn-community/navy-nebula/
 github-icon: true
 
 -- ds.page.footer:
 
--- footer.social-sideline-footer:
-social: true
-site-logo: $site-logo
-site-url: index.html
-twitter-url: https://twitter.com/FifthTryHQ
-discord-url: https://discord.gg/bucrdvptYd
-copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
+-- bgt.footer:
+site-logo: $common.site-logo
+site-url: $common.site-url 
+logo-width: $common.logo-width
+logo-height: 48
+footer-links: $common.footer-list
+
+I’m surprised you had the courage to take the responsibility yourself. Leave 
+that to me.
+
 
 -- end: ds.page.footer
 

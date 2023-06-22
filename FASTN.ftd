@@ -4,7 +4,7 @@
 favicon: /-/fastn-community.github.io/navy-nebula/favicon.ico
 
 
--- fastn.dependency: fastn-community.github.io/doc-site as ds
+-- fastn.dependency: fastn-community.github.io/midnight-rush as ds
 -- fastn.dependency: fastn-community.github.io/footer
 
 -- fastn.auto-import: ds
