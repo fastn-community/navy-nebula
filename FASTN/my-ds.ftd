@@ -2,8 +2,8 @@
 -- import: fastn-community.github.io/navy-nebula/common
 -- import: fastn-community.github.io/navy-nebula as bgt
 -- import: fastn-community.github.io/footer
+-- import: fastn-community.github.io/navy-nebula-cs as cs
 
-;; ********* my-ds document **********
 
 -- common.site-logo site-logo: $assets.files.assets.ipsum-logo.svg
 
@@ -23,6 +23,7 @@ optional string site-url: $common.site-url
 boolean full-width: false
 boolean blog: false
 ftd.ui list hero:
+ftd.color-scheme colors: $cs.main
 
 -- ds.page: $page.title
 site-logo: $page.site-logo
@@ -39,6 +40,7 @@ blog: $page.blog
 hero: $page.hero
 github-url: https://github.com/fastn-community/navy-nebula/
 github-icon: true
+colors: $page.colors
 
 -- ds.page.footer:
 

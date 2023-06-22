@@ -7,6 +7,7 @@
 
 
 
+
 -- my-ds.page:
 full-width: true
 sidebar: false
@@ -219,12 +220,12 @@ margin-top.px: 8
 width.fixed.percent: 45
 height: fill-container
 link: $featured-post-card-desktop.url
-border-radius.px: 20
 
 -- ftd.image: 
 src: $featured-post-card-desktop.image
 width: fill-container
 height: fill-container
+border-radius.px: 20
 
 -- end: ftd.column
 
@@ -468,6 +469,7 @@ src: $post-article-ui-desktop.image
 height: fill-container
 width: fill-container
 link: $post-article-ui-desktop.link
+border-radius.px: 20
 
 -- end: ftd.column
 
@@ -771,7 +773,7 @@ boolean is-last:
 
 -- ftd.column:
 spacing.fixed.px: 6
-margin-left.px: 18
+margin-right.px : 18
 align-self: center
 
 -- ftd.text: $footer-list.title
@@ -861,7 +863,6 @@ $loop$: $footer-mobile.footer-links as $obj
 
 -- ftd.row:
 spacing.fixed.px: 24
-margin-left.px: 48
 align-self: center
 wrap: true
 
@@ -1292,7 +1293,7 @@ border-width.px: 1
 border-radius.px: 12
 padding-vertical.px: 24
 padding-horizontal.px: 24
-border-color: $inherited.colors.text
+border-color: $inherited.colors.border
 color: $inherited.colors.text
 
 -- ftd.row:
@@ -1357,6 +1358,8 @@ margin-vertical.px: 32
 background.solid: $inherited.colors.background.step-1
 border-radius.px: 20
 color: $inherited.colors.text-strong
+border-width.px: 1
+border-color: $inherited.colors.border
 
 -- ftd.text: $search-card.title
 role: $inherited.types.heading-large
@@ -1381,6 +1384,8 @@ padding-horizontal.px: 32
 border-radius.px: 30
 width.fixed.px: 280
 role: $inherited.types.link
+border-color: $inherited.colors.border
+border-width.px: 1
 
 -- ftd.text: $search-card.cta-primary
 role: $inherited.types.link
