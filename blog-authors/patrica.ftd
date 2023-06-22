@@ -1,0 +1,26 @@
+-- import: fastn-community.github.io/navy-nebula as blog
+-- import: fastn-community.github.io/navy-nebula/common 
+
+
+
+
+
+-- common.author-meta patrica: Patrica AVA
+profile: UI Designer
+bio-url:  blog-authors/patrica/
+image: $assets.files.static.avatar.svg
+company: XVY Pvt. Ltd.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+
+
+
+
+-- my-ds.page: 
+sidebar: false
+
+-- blog.author-bio: 
+author: $patrica
+
+-- end: my-ds.page
