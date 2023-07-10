@@ -1,0 +1,101 @@
+-- import: fastn-community.github.io/bling/collapse
+
+
+
+
+
+-- my-ds.page: posts
+sidebar: true
+
+-- my-ds.page.right-sidebar:
+
+-- ds.toc-title: On this page
+
+-- ds.link-group: Creating posts list page
+cta: components/posts/#creating-post-list-page
+
+-- ds.link-group: Understand code snippet
+cta: components/posts/#understand-above-code-snippet
+
+-- end: my-ds.page.right-sidebar
+
+-- my-ds.page.body:
+
+-- ds.h2: Creating posts list page
+id: creating-post-list-page
+
+It's very common to display a list of top/latest posts as a blog home page. Our
+`doc-site` blog feature helps you to create your favorite blog posts list home 
+page.
+
+It's very simple to create your top/latest featured posts using `-- blog.posts` which
+can be added inside `-- ds.page`.
+
+Let's learn how to create it.
+
+-- ds.code: Example of how to use `-- blog.posts`
+lang: ftd
+download: post-list.ftd
+max-height.fixed.px: 300
+
+\-- import: fastn-community.github.io/navy-nebula as blog
+\-- import: fastn-community.github.io/navy-nebula/blog-articles/sample-post
+
+\-- ds.page:
+
+\-- blog.posts:
+
+\-- featured-post:
+post-data: $sample-post.meta
+cta-primary: Read more
+cta-primary-url: blog-articles/sample-post/
+
+\-- post-article:
+post-data: $sample-post.meta
+
+\-- end: blog.posts
+
+\-- end: ds.page
+
+-- ds.h3: Let's understand above code snippet:
+id: understand-above-code-snippet
+
+-- collapse.collapse: Importing blog posts meta with `import` 
+remove-gap: true
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/navy-nebula/blog-articles/sample-post
+
+-- ds.markdown:
+
+It imports `sample-post`and its all details `/blog-articles/` folder. 
+
+-- end: collapse.collapse
+
+-- collapse.collapse: `-- my-ds.page:`
+remove-gap: true
+
+Its midnight-rush default page component.
+
+-- collapse.collapse: `-- blog.posts:`
+remove-gap: true
+info-right: Learn more: [`posts`](components/posts/)
+
+This line imports the `blog.posts` component which helps to create featured list
+page ui.
+
+-- collapse.collapse: `-- blog.featured-post:`
+remove-gap: true
+
+This line imports the `blog.featured-post` component which comes with featured
+post UI. [see our blog page](blog/)
+
+-- collapse.collapse: `-- blog.post-article:`
+remove-gap: true
+
+The `blog.post-article` component shows your post image at the top then shows the
+title of the post and other post details. [see our blog page](index.html)
+
+-- end: my-ds.page

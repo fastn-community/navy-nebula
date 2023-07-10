@@ -8,10 +8,15 @@
 
 
 
--- my-ds.page:
-full-width: true
+
+-- my-ds.page: Blog
 sidebar: false
 blog: true
+full-width: true
+
+We have developed featured article list, blog article & author's bio pages. 
+
+To learn more about posts page - [Click here](components/posts/).
 
 -- featured-post:
 post-data: $sample-post.meta

@@ -7,6 +7,7 @@ favicon: /-/fastn-community.github.io/navy-nebula/favicon.ico
 -- fastn.dependency: fastn-community.github.io/midnight-rush as ds
 -- fastn.dependency: fastn-community.github.io/footer
 -- fastn.dependency: fastn-community.github.io/navy-nebula-cs
+-- fastn.dependency: fastn-community.github.io/bling
 
 -- fastn.auto-import: ds
 -- fastn.auto-import: fastn-community.github.io/navy-nebula/FASTN/my-ds
@@ -15,6 +16,8 @@ favicon: /-/fastn-community.github.io/navy-nebula/favicon.ico
 
 -- fastn.sitemap:
 
-# Home Page: /
 
-- Page with Right Sidebar: /sidebar/
+# Home: index.html
+
+# Blog: /components/posts/
+- Posts: /components/posts/
