@@ -4,13 +4,12 @@
 favicon: /-/fastn-community.github.io/navy-nebula/favicon.ico
 
 
--- fastn.dependency: fastn-community.github.io/midnight-rush as ds
--- fastn.dependency: fastn-community.github.io/footer
+-- fastn.dependency: fastn-community.github.io/midnight-rush 
 -- fastn.dependency: fastn-community.github.io/navy-nebula-cs
 -- fastn.dependency: fastn-community.github.io/bling
 
 -- fastn.auto-import: ds
--- fastn.auto-import: fastn-community.github.io/navy-nebula/FASTN/my-ds
+-- fastn.auto-import: fastn-community.github.io/navy-nebula/FASTN/ds
 -- fastn.auto-import: fastn-community.github.io/navy-nebula/assets
 
 
