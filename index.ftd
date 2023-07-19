@@ -1,5 +1,4 @@
 -- import: fastn-community.github.io/navy-nebula/common
--- import: fastn/processors as pr
 -- import: fastn-community.github.io/navy-nebula/blog-articles/sample-post
 
 
@@ -9,7 +8,7 @@
 
 
 
--- my-ds.page: Blog
+-- ds.page: Blog
 sidebar: false
 blog: true
 full-width: true
@@ -48,7 +47,7 @@ post-data: $sample-post.meta-1
 -- search-card: Subscribe
 help-info: Sign up in 2 minutes
 
--- end: my-ds.page
+-- end: ds.page
 
 
 
