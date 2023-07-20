@@ -311,6 +311,7 @@ padding-bottom.px: 4
 link if { featured-post-article-mobile.cta-primary != NULL }: $featured-post-article-mobile.cta-primary-url
 
 -- ftd.text: $featured-post-article-mobile.cta-primary
+if: { featured-post-article-mobile.cta-primary != NULL }
 role: $inherited.types.link
 white-space: nowrap
 color: $inherited.colors.text-strong

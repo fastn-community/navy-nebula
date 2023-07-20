@@ -37,7 +37,7 @@ post-data: $sample-post.meta
 -- ds.rendered.output:
 
 -- ds.featured-post:
-post-data: $sample-post.meta
+post-data: $sample-post.meta-2
 
 -- end: ds.rendered.output
 
