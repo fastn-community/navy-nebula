@@ -2,7 +2,7 @@
 -- import: fastn-community.github.io/navy-nebula/blog-articles/sample-post 
 
 
--- ds.page: post-card
+-- ds.page: post-article
 document-title: fastn blog Template. Build Your Own Website with Ease
 document-description: Simple, easy-to-use navy-nebula template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
 document-image: https://fastn-community.github.io/navy-nebula/-/fastn-community.github.io/navy-nebula/assets/navy-nebula-og-image.jpg
@@ -16,7 +16,7 @@ sidebar: true
 
 -- ds.page.body:
 
-`ds.post-card` can be used to show blog/article meta as a post-card.
+`ds.post-article` can be used to show blog/article meta as a post-article.
 To see it in action - [Click here](index.html).
 
 -- ds.h2: Example:
@@ -32,12 +32,12 @@ published-on: May 18, 6 min
 post-image: $assets.files.assets.featured-1.jpg
 post-url: blog-articles/sample-post/
 
-\-- ds.post-card:
+\-- ds.post-article:
 post-data: $sample-post.meta1
 
 -- ds.rendered.output:
 
--- ds.post-card:
+-- ds.post-article:
 post-data: $sample-post.meta
 
 -- end: ds.rendered.output
@@ -48,10 +48,10 @@ post-data: $sample-post.meta
 -- ds.code:
 lang: ftd
 
-\-- ds.post-card:
+\-- ds.post-article:
 post-data: $sample-post.meta
 
--- ds.h3: Properties of `post-card` component
+-- ds.h3: Properties of `post-article` component
 
 - **post-data** - `type: record` use `common.post-meta` record to create
     featured post of your blog post as shown in below code snippet. 

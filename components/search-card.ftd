@@ -31,11 +31,13 @@ can be added inside `-- ds.page`.
 
 -- ds.rendered.input:
 
-\-- ds.search-card:
+\-- ds.search-card: Subscribe
+help-info: Sign up in 2 minutes
 
 -- ds.rendered.output:
 
--- ds.search-card:
+-- ds.search-card: Subscribe
+help-info: Sign up in 2 minutes
 
 -- end: ds.rendered.output
 

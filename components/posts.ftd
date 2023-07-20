@@ -44,10 +44,10 @@ post-data: $sample-post.meta
 
 \-- ds.posts:
 
-\-- ds.post-card:
+\-- ds.post-article:
 post-data: $sample-post.meta1
 
-\-- ds.post-card:
+\-- ds.post-article:
 post-data: $sample-post.meta2
 
 \-- end: ds.posts
@@ -85,11 +85,11 @@ info-right: Learn more: [`featured-post`](components/featured-post/)
 This line imports the `ds.featured-post` component which comes with featured
 post UI. [see our blog page](index.html)
 
--- collapse.collapse: `-- ds.post-card`
+-- collapse.collapse: `-- ds.post-article`
 remove-gap: true
-info-right: Learn more: [`post-card`](components/post-card/)
+info-right: Learn more: [`post-article`](components/post-article/)
 
-The `ds.post-card` component shows your post image after the title and
+The `ds.post-article` component shows your post image after the title and
 post metadata then shows other post details. [see our blog page](index.html)
 
 -- end: ds.page
