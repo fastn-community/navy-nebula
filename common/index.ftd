@@ -49,6 +49,31 @@ tag-link: blog/
 
 
 
+
+-- tags-list list topic-lists:
+
+-- tags-list: Lorem1
+tag-link: /
+
+-- tags-list: Lorem2
+tag-link: /
+
+-- tags-list: Lorem3
+tag-link: /
+
+-- tags-list: Lorem4
+tag-link: /
+
+-- tags-list: Lorem5
+tag-link: /
+
+-- tags-list: Lorem6
+tag-link: /
+
+-- end: topic-lists
+
+
+
 -- record author-meta:
 caption title:
 string profile:
