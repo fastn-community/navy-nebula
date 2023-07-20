@@ -17,10 +17,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 
--- my-ds.page: 
+-- ds.page: 
 sidebar: false
 
 -- blog.author-bio: 
 author: $patrica
 
--- end: my-ds.page
+-- end: ds.page
