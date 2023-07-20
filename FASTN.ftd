@@ -26,7 +26,7 @@ favicon: /-/fastn-community.github.io/navy-nebula/favicon.ico
   skip: true
   - post: /components/post/
   skip: true
-  - post-card: /components/post-card/
+  - post-article: /components/post-article/
   skip: true
   - posts: /components/posts/
   skip: true
