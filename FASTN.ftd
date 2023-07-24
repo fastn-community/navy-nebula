@@ -19,7 +19,7 @@ favicon: /-/fastn-community.github.io/navy-nebula/favicon.ico
 # Home: index.html
 
 # Docs: /components/
-- Docs Components: /components/
+- Components: /components/
   - author-bio: /components/author-bio/
   skip: true
   - featured-post: /components/featured-post/
