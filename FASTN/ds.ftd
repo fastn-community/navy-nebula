@@ -1,8 +1,11 @@
--- import: ds
+-- import: fastn-community.github.io/navy-nebula-cs
 -- import: fastn-community.github.io/navy-nebula/common
--- import: fastn-community.github.io/navy-nebula as bgt
+-- import: fastn-community.github.io/navy-nebula 
+export: featured-post, post, posts, post-article, footer, search-card, topic, author-bio,post-article
 -- import: fastn-community.github.io/footer
--- import: fastn-community.github.io/navy-nebula-cs as cs
+-- import: fastn-community.github.io/midnight-rush  
+export: h0, h1, h2, h3, markdown, code, image, link, link-group, toc-title, rendered, letter, letter-data, letter-bar, letter-category, letter-stack
+
 
 
 -- common.site-logo site-logo: $assets.files.assets.ipsum-logo.svg
@@ -23,9 +26,9 @@ optional string site-url: $common.site-url
 boolean full-width: false
 boolean blog: false
 ftd.ui list hero:
-ftd.color-scheme colors: $cs.main
+ftd.color-scheme colors: $navy-nebula-cs.main
 
--- ds.page: $page.title
+-- midnight-rush.page: $page.title
 site-logo: $page.site-logo
 site-url: $page.site-url
 body: $page.body
@@ -42,9 +45,9 @@ github-url: https://github.com/fastn-community/navy-nebula/
 github-icon: true
 colors: $page.colors
 
--- ds.page.footer:
+-- midnight-rush.page.footer:
 
--- bgt.footer:
+-- navy-nebula.footer:
 site-logo: $common.site-logo
 site-url: $common.site-url 
 logo-width: $common.logo-width
@@ -55,7 +58,7 @@ I’m surprised you had the courage to take the responsibility yourself. Leave
 that to me.
 
 
--- end: ds.page.footer
+-- end: midnight-rush.page.footer
 
 -- ftd.column:
 spacing.fixed.px: 24
@@ -64,6 +67,6 @@ children: $page.wrapper
 
 -- end: ftd.column
 
--- end: ds.page
+-- end: midnight-rush.page
 
 -- end: page

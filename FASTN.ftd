@@ -4,17 +4,33 @@
 favicon: /-/fastn-community.github.io/navy-nebula/favicon.ico
 
 
--- fastn.dependency: fastn-community.github.io/midnight-rush as ds
--- fastn.dependency: fastn-community.github.io/footer
+-- fastn.dependency: fastn-community.github.io/midnight-rush 
 -- fastn.dependency: fastn-community.github.io/navy-nebula-cs
+-- fastn.dependency: fastn-community.github.io/bling
 
--- fastn.auto-import: ds
--- fastn.auto-import: fastn-community.github.io/navy-nebula/FASTN/my-ds
+
+-- fastn.auto-import: fastn-community.github.io/navy-nebula/FASTN/ds
 -- fastn.auto-import: fastn-community.github.io/navy-nebula/assets
 
 
 -- fastn.sitemap:
 
-# Home Page: /
 
-- Page with Right Sidebar: /sidebar/
+# Home: index.html
+
+# Docs: /components/
+- Components: /components/
+  - author-bio: /components/author-bio/
+  skip: true
+  - featured-post: /components/featured-post/
+  skip: true
+  - post: /components/post/
+  skip: true
+  - post-article: /components/post-article/
+  skip: true
+  - posts: /components/posts/
+  skip: true
+  - search-card: /components/search-card/
+  skip: true
+  - topic: /components/topic/
+  skip: true

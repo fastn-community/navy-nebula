@@ -1,0 +1,95 @@
+-- import: fastn-community.github.io/navy-nebula/components
+-- import: fastn-community.github.io/bling/collapse
+
+
+
+
+
+-- ds.page: posts
+document-title: fastn Doc-Site Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use navy-nebula template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/navy-nebula/-/fastn-community.github.io/navy-nebula/assets/navy-nebula-og-image.jpg
+sidebar: true
+
+-- ds.page.right-sidebar:
+
+-- components.sidebar-index:
+
+-- end: ds.page.right-sidebar
+
+-- ds.page.body:
+
+-- ds.h2: Creating posts list page
+
+It's very common to display a list of top/latest posts as a blog home page. Our
+`navy-nebula` blog feature helps you to create your favorite blog posts list home 
+page.
+
+It's very simple to create your top/latest featured posts using `-- ds.posts` which
+can be added inside `-- ds.page`.
+
+Let's learn how to create it.
+
+-- ds.code: Example of how to use `-- ds.posts`
+lang: ftd
+download: post-list.ftd
+max-height.fixed.px: 300
+
+\-- import: fastn-community.github.io/navy-nebula/blog-articles/sample-post
+
+\-- ds.page:
+
+\-- ds.featured-post:
+post-data: $sample-post.meta
+
+\-- ds.posts:
+
+\-- ds.post-article:
+post-data: $sample-post.meta1
+
+\-- ds.post-article:
+post-data: $sample-post.meta2
+
+\-- end: ds.posts
+
+\-- end: ds.page
+
+-- ds.h3: Let's understand above code snippet:
+
+-- collapse.collapse: Importing blog posts meta with `import` 
+remove-gap: true
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/navy-nebula/blog-articles/sample-post
+
+-- ds.markdown:
+
+It import `sample-post` and its all details from `/blog-articles/` and
+`/blog-articles/` folder. 
+
+-- end: collapse.collapse
+
+-- collapse.collapse: `-- ds.posts:`
+remove-gap: true
+info-right: Learn more: [`posts`](components/posts/)
+
+This line imports the `ds.posts` component which helps to create featured list
+page ui.
+
+-- collapse.collapse: `-- ds.featured-post:`
+remove-gap: true
+info-right: Learn more: [`featured-post`](components/featured-post/)
+
+This line imports the `ds.featured-post` component which comes with featured
+post UI. [see our blog page](index.html)
+
+-- collapse.collapse: `-- ds.post-article`
+remove-gap: true
+info-right: Learn more: [`post-article`](components/post-article/)
+
+The `ds.post-article` component shows your post image after the title and
+post metadata then shows other post details. [see our blog page](index.html)
+
+-- end: ds.page

@@ -1,0 +1,122 @@
+-- ds.page: Blog Template Components
+document-title: fastn Blog Template Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use navy-nebula template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/navy-nebula/-/fastn-community.github.io/navy-nebula/assets/navy-nebula-og-image.jpg
+
+Components are like Lego blocks for building websites. They are pre-designed 
+building blocks that serve specific purposes or display specific content, 
+allowing you to easily create a complete webpage by combining and customizing 
+them.
+
+-- ds.h1: Index
+
+We have listed all navy-nebula components below, click on a component name to
+learn more about it.
+
+-- ds.letter-stack:
+height.fixed.px if { ftd.device != "mobile" }: 1000
+height: fill-container
+contents-a: $letter-contents-a
+contents-f: $letter-contents-f
+contents-p: $letter-contents-p
+contents-s: $letter-contents-s
+contents-t: $letter-contents-t
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+
+;; APPENDIX ------------------------------------------------------------
+
+-- ds.letter-data list letter-contents-a:
+
+-- ds.letter-data: author-bio
+link: components/author-bio/
+
+-- end: letter-contents-a
+
+-- ds.letter-data list letter-contents-f:
+
+-- ds.letter-data: featured-post
+link: components/featured-post/
+
+-- end: letter-contents-f
+
+-- ds.letter-data list letter-contents-p:
+
+-- ds.letter-data: post
+link: components/post/
+
+-- ds.letter-data: post-article
+link: components/post-article/
+
+-- ds.letter-data: posts
+link: components/posts/
+
+-- end: letter-contents-p
+
+-- ds.letter-data list letter-contents-s:
+
+-- ds.letter-data: search-card
+link: components/search-card/
+
+-- end: letter-contents-s
+
+-- ds.letter-data list letter-contents-t:
+
+-- ds.letter-data: topic
+link: components/topic/
+
+-- end: letter-contents-t
+
+
+
+
+
+
+
+
+
+
+-- component sidebar-index:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+
+-- ds.h3: Index
+
+-- ds.link: 🏠 Blog Template Components
+cta: components/
+
+-- ds.link: ☞ author-bio
+cta: components/author-bio/
+
+-- ds.link: ☞ featured-post
+cta: components/featured-post/
+
+-- ds.link: ☞ post
+cta: components/post/
+
+-- ds.link: ☞ post-article
+cta: components/post-article/
+
+-- ds.link: ☞ posts
+cta: components/posts/
+
+-- ds.link: ☞ search-card
+cta: components/search-card/
+
+-- ds.link: ☞ topic
+cta: components/topic/
+
+-- end: ftd.column
+
+-- end: sidebar-index
