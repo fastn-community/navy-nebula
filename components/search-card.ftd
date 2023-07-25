@@ -1,0 +1,53 @@
+-- import: fastn-community.github.io/navy-nebula/components
+-- import: fastn-community.github.io/bling/collapse
+
+
+
+
+
+-- ds.page: search-card
+document-title: fastn blog Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use navy-nebula template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/navy-nebula/-/fastn-community.github.io/navy-nebula/assets/navy-nebula-og-image.jpg
+sidebar: true
+
+-- ds.page.right-sidebar:
+
+-- components.sidebar-index:
+
+-- end: ds.page.right-sidebar
+
+-- ds.page.body:
+
+Sometimes we want to display a search bar in blog home page. Our
+`navy-nebula` search-card feature helps you to create search card.
+
+It's very simple to create your search bar using `-- ds.search-card` which
+can be added inside `-- ds.page`.
+
+-- ds.h2: Example:
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- ds.search-card: Subscribe
+help-info: Sign up in 2 minutes
+
+-- ds.rendered.output:
+
+-- ds.search-card: Subscribe
+help-info: Sign up in 2 minutes
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- ds.h3: Let's understand above code snippet:
+
+-- collapse.collapse: `-- ds.search-card:`
+remove-gap: true
+
+Its navy-nebula default search-card component.
+
+-- end: ds.page

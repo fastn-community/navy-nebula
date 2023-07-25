@@ -1,0 +1,70 @@
+-- import: fastn-community.github.io/navy-nebula/components
+-- import: fastn-community.github.io/navy-nebula/common
+-- import: fastn-community.github.io/bling/collapse
+
+
+
+
+
+-- ds.page: topic
+document-title: fastn blog Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use navy-nebula template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/navy-nebula/-/fastn-community.github.io/navy-nebula/assets/navy-nebula-og-image.jpg
+sidebar: true
+
+-- ds.page.right-sidebar:
+
+-- components.sidebar-index:
+
+-- end: ds.page.right-sidebar
+
+-- ds.page.body:
+
+Sometimes we want to display a search bar in blog home page. Our
+`navy-nebula` topic feature helps you to create search card.
+
+It's very simple to create your search bar using `-- ds.topic` which
+can be added inside `-- ds.page`.
+
+-- ds.h3: Let's understand above code snippet:
+
+-- collapse.collapse: Importing blog posts meta with `import` 
+remove-gap: true
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/navy-nebula/common
+
+-- ds.markdown:
+
+It import `common/index` and its all details from `/common/` folder. 
+
+-- end: collapse.collapse
+
+-- ds.h2: Example:
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- ds.topic: Topics
+topics: $common.topic-lists
+
+-- ds.rendered.output:
+
+-- ds.topic: Topics
+topics: $common.topic-lists
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- ds.h3: Let's understand above code snippet:
+
+-- collapse.collapse: `-- ds.topic:`
+remove-gap: true
+
+Its navy-nebula default topic component.
+
+-- end: ds.page

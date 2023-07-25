@@ -1,0 +1,259 @@
+-- import: fastn-community.github.io/navy-nebula/components
+-- import: fastn-community.github.io/bling/collapse
+
+
+-- ds.page: post
+document-title: fastn Doc-Site Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use navy-nebula template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/navy-nebula/-/fastn-community.github.io/navy-nebula/assets/navy-nebula-og-image.jpg
+sidebar: true
+
+-- ds.page.right-sidebar:
+
+-- components.sidebar-index:
+
+-- end: ds.page.right-sidebar
+
+-- ds.page.body:
+
+`ds.post` component, helps you to create your posts and article pages with ease.
+
+-- ds.h2: Example:
+
+To see example post - [Click here](blog-articles/sample-post/)
+
+To write a post/article add your post meta and post details. Below code snippet
+shows how to write a post meta and create your post. 
+
+-- ds.code: Example of how to create blog post 
+lang: ftd
+max-height.fixed.px: 300
+download: post.ftd
+
+\-- import: fastn-community.github.io/navy-nebula/blog-authors/patrica as author
+
+\-- common.post-meta meta: Lorem ipsum dolor sit amet. Est voluptatem esse
+tag: Lorem ipsum
+author: $author.patrica
+published-on: May 18, 6 min
+post-image: $assets.files.assets.featured-1.jpg
+post-url: blog-articles/sample-post/
+
+\-- ds.post: 
+meta: $meta
+
+\-- ds.markdown:
+
+Lorem ipsum dolor sit amet. Est voluptatem esse ea repellat facere ut itaque
+labore ex quaerat error et distinctio reiciendis? Quo praesentium sapiente vel
+soluta assumenda et omnis doloremque est beatae voluptatem! 
+
+\-- ds.image:
+src: $assets.files.assets.img.jpg
+
+\-- ds.h2: Working remotely as a digital nomad in Honduras
+
+\-- ds.markdown:
+
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+\-- ds.h2: Roatan Island as a digital nomad base
+
+\-- ds.markdown:
+
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! 
+
+In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+Quo praesentium sapiente vel soluta assumenda et omnis doloremque est beatae
+voluptatem! Eum delectus dolorum et animi consectetur est asperiores tempore
+rem inventore nihil.Quo praesentium sapiente vel soluta assumenda et omnis
+doloremque est beatae voluptatem! Eum delectus dolorum et animi consectetur est
+asperiores tempore rem inventore nihil.Quo praesentium sapiente vel soluta
+assumenda et omnis doloremque est beatae voluptatem! Eum delectus dolorum et
+animi consectetur est asperiores tempore rem inventore nihil.
+
+\-- ds.image:
+src: $assets.files.assets.img2.jpg
+
+\-- ds.markdown:
+
+`Activities in Roatan`
+
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! 
+
+In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+\-- ds.h2: Coworking in Roatan
+
+\-- ds.markdown:
+
+In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+\-- ds.image:
+src: $assets.files.assets.img3.jpeg
+
+\-- ds.markdown:
+
+Along with fast Wifi and great amenities, Beach Desk had incredible views of the
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! 
+
+\-- ds.image:
+src: $assets.files.assets.img4.jpg
+
+\-- ds.h2: Wrap-Up: Life as a Digital Nomad in Roatan
+
+\-- ds.markdown:
+
+Quo praesentium sapiente vel soluta assumenda et omnis doloremque est beatae
+voluptatem! Eum delectus dolorum et animi consectetur est asperiores tempore
+rem inventore nihil.Quo praesentium sapiente vel soluta assumenda et omnis
+doloremque est beatae voluptatem! Eum delectus dolorum et animi consectetur est
+asperiores tempore rem inventore nihil.Quo praesentium sapiente vel soluta
+assumenda et omnis doloremque est beatae voluptatem! Eum delectus dolorum et
+animi consectetur est asperiores tempore rem inventore nihil.
+
+-- ds.h3: Let's understand above code snippet:
+
+-- collapse.collapse: Importing author
+remove-gap: true
+info-right: Learn more: [`ds.author-bio`](components/author-bio/)
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/navy-nebula/blog-authors/patrica as author
+
+-- ds.markdown:
+
+It's used to import author metadata. In above fastn `import` we are importing
+`patrica.ftd` which is inside `blog-authors/` folder.
+
+-- end: collapse.collapse
+
+-- ds.markdown:
+
+Below code snippet is used to add post meta.
+
+-- ds.code:
+lang: ftd
+
+\-- common.post-meta meta: Lorem ipsum dolor sit amet. Est voluptatem esse
+tag: Lorem ipsum
+author: $author.patrica
+published-on: May 18, 6 min
+post-image: $assets.files.assets.featured-1.jpg
+post-url: blog-articles/sample-post/
+
+-- ds.markdown:
+
+Let's understand properties of `common.post-meta` record.
+
+-- collapse.collapse: `common.post-meta` - *type:* `record` 
+remove-gap: true
+$is-open: true
+
+It's used to add post metadata. 
+
+Below are properties of `common.post-meta` record:
+
+-- ftd.column:
+margin-top.px: 16
+spacing.fixed.px: 12
+width: fill-container
+
+-- collapse.collapse: `title` - *type:* `caption` 
+remove-gap: true
+
+It's used add title of the post meta component.
+
+-- end: collapse.collapse
+
+-- collapse.collapse: `body` - *type:* `body` 
+remove-gap: true
+
+It's used add body content to the post meta component.
+
+-- end: collapse.collapse
+
+-- collapse.collapse: `published-on` - *type:* `string`
+remove-gap: true
+
+It's used to add post timestamp e.g. 1st Jan 22, 2023 at 10:02 pm. This is
+assets property you need to add date and time manually.
+
+-- end: collapse.collapse
+
+-- collapse.collapse: `post-image` - *type:* `ftd.image-src` `optional`
+remove-gap: true
+
+It's used to add image url to post meta component.
+
+-- end: collapse.collapse
+
+-- collapse.collapse: `post-url` - *type:* `string` `optional`
+remove-gap: true
+
+It's used to post url to post meta component.
+
+-- end: collapse.collapse
+
+-- collapse.collapse: `author` - *type:* `author-meta`
+remove-gap: true
+
+It's used to add author meta from `common.author-meta` record to post meta
+component.
+
+-- end: collapse.collapse
+
+-- end: ftd.column
+
+-- end: collapse.collapse
+
+-- ds.markdown:
+
+Using `-- ds.markdown:` you can add more body content to your `ds.post`
+component.
+
+`ds.post` component has built-in container in which you can add as many
+components you want to use, as shown in above example. e.g. `ds.code`, `ds.h1`
+etc.
+
+-- end: ds.page

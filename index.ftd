@@ -1,5 +1,4 @@
 -- import: fastn-community.github.io/navy-nebula/common
--- import: fastn/processors as pr
 -- import: fastn-community.github.io/navy-nebula/blog-articles/sample-post
 
 
@@ -8,10 +7,15 @@
 
 
 
--- my-ds.page:
-full-width: true
+
+-- ds.page: Blog
 sidebar: false
 blog: true
+full-width: true
+
+We have developed featured article list, blog article & author's bio pages. 
+
+To learn more about posts page - [Click here](components/posts/).
 
 -- featured-post:
 post-data: $sample-post.meta
@@ -43,7 +47,7 @@ post-data: $sample-post.meta-1
 -- search-card: Subscribe
 help-info: Sign up in 2 minutes
 
--- end: my-ds.page
+-- end: ds.page
 
 
 
@@ -66,7 +70,7 @@ common.tags-list list tags: $common.tag
 -- ftd.column:
 width: fill-container
 
--- featured-post-card: $featured-post.post-data.title
+-- featured-post-article: $featured-post.post-data.title
 timestamp: $featured-post.post-data.published-on
 author: $featured-post.post-data.author
 image: $featured-post.post-data.post-image
@@ -92,7 +96,7 @@ tags: $featured-post.post-data.tags
 
 
 
--- component featured-post-card:
+-- component featured-post-article:
 caption title:
 string timestamp:
 common.author-meta author:
@@ -111,41 +115,41 @@ width: fill-container
 
 -- ftd.desktop:
 
--- featured-post-card-desktop: $featured-post-card.title
-timestamp: $featured-post-card.timestamp
-author: $featured-post-card.author
-image: $featured-post-card.image
-url: $featured-post-card.url
-body: $featured-post-card.body
-info: $featured-post-card.info
-cta-primary: $featured-post-card.cta-primary
-cta-primary-url: $featured-post-card.cta-primary-url
-cta-secondary: $featured-post-card.cta-secondary
-cta-secondary-url: $featured-post-card.cta-secondary-url
-tags: $featured-post-card.tags
+-- featured-post-article-desktop: $featured-post-article.title
+timestamp: $featured-post-article.timestamp
+author: $featured-post-article.author
+image: $featured-post-article.image
+url: $featured-post-article.url
+body: $featured-post-article.body
+info: $featured-post-article.info
+cta-primary: $featured-post-article.cta-primary
+cta-primary-url: $featured-post-article.cta-primary-url
+cta-secondary: $featured-post-article.cta-secondary
+cta-secondary-url: $featured-post-article.cta-secondary-url
+tags: $featured-post-article.tags
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- featured-post-card-mobile: $featured-post-card.title
-timestamp: $featured-post-card.timestamp
-author: $featured-post-card.author
-image: $featured-post-card.image
-url: $featured-post-card.url
-body: $featured-post-card.body
-info: $featured-post-card.info
-cta-primary: $featured-post-card.cta-primary
-cta-primary-url: $featured-post-card.cta-primary-url
-cta-secondary: $featured-post-card.cta-secondary
-cta-secondary-url: $featured-post-card.cta-secondary-url
-tags: $featured-post-card.tags
+-- featured-post-article-mobile: $featured-post-article.title
+timestamp: $featured-post-article.timestamp
+author: $featured-post-article.author
+image: $featured-post-article.image
+url: $featured-post-article.url
+body: $featured-post-article.body
+info: $featured-post-article.info
+cta-primary: $featured-post-article.cta-primary
+cta-primary-url: $featured-post-article.cta-primary-url
+cta-secondary: $featured-post-article.cta-secondary
+cta-secondary-url: $featured-post-article.cta-secondary-url
+tags: $featured-post-article.tags
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: featured-post-card
+-- end: featured-post-article
 
 
 
@@ -156,7 +160,7 @@ tags: $featured-post-card.tags
 
 
 
--- component featured-post-card-desktop:
+-- component featured-post-article-desktop:
 caption title:
 string timestamp:
 common.author-meta author:
@@ -177,9 +181,9 @@ padding-vertical.px: 24
 padding-horizontal.px: 24
 height.fixed.px: 450
 margin-bottom.px: 100
-$on-mouse-enter$: $ftd.set-bool($a = $featured-post-card-desktop.hover, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $featured-post-card-desktop.hover, v = false)
-background.solid if { featured-post-card-desktop.hover }: $inherited.colors.background.step-1
+$on-mouse-enter$: $ftd.set-bool($a = $featured-post-article-desktop.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $featured-post-article-desktop.hover, v = false)
+background.solid if { featured-post-article-desktop.hover }: $inherited.colors.background.step-1
 border-radius.px: 20
 
 -- ftd.column:
@@ -191,26 +195,26 @@ role: $inherited.types.heading-tiny
 
 -- ftd.text: $obj.title
 link: $obj.tag-link
-$loop$: $featured-post-card-desktop.tags as $obj
+$loop$: $featured-post-article-desktop.tags as $obj
 style: light
 color: $inherited.colors.text
 
--- ftd.text: $featured-post-card-desktop.title
+-- ftd.text: $featured-post-article-desktop.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
 style: medium
-link: $featured-post-card-desktop.url
+link: $featured-post-article-desktop.url
 margin-vertical.px: 12
 
 -- ftd.text:
-if: { featured-post-card-desktop.body != NULL }
+if: { featured-post-article-desktop.body != NULL }
 role: $inherited.types.copy-regular
 margin-vertical.px: 8
 style: light
 
-$featured-post-card-desktop.body
+$featured-post-article-desktop.body
 
--- ftd.text: $featured-post-card-desktop.timestamp
+-- ftd.text: $featured-post-article-desktop.timestamp
 style: light
 margin-top.px: 8
 
@@ -219,10 +223,10 @@ margin-top.px: 8
 -- ftd.column:
 width.fixed.percent: 45
 height: fill-container
-link: $featured-post-card-desktop.url
+link: $featured-post-article-desktop.url
 
 -- ftd.image: 
-src: $featured-post-card-desktop.image
+src: $featured-post-article-desktop.image
 width: fill-container
 height: fill-container
 border-radius.px: 20
@@ -231,7 +235,7 @@ border-radius.px: 20
 
 -- end: ftd.row
 
--- end: featured-post-card-desktop
+-- end: featured-post-article-desktop
 
 
 
@@ -242,7 +246,7 @@ border-radius.px: 20
 
 
 
--- component featured-post-card-mobile:
+-- component featured-post-article-mobile:
 caption title:
 string timestamp:
 common.author-meta author:
@@ -267,57 +271,58 @@ margin-top.px: 32
 color: $inherited.colors.text
 
 -- ftd.image: 
-src: $featured-post-card-mobile.image
+src: $featured-post-article-mobile.image
 width: fill-container
-link: $featured-post-card-mobile.url
+link: $featured-post-article-mobile.url
 
 -- ftd.text: $obj.title
 role: $inherited.types.copy-regular
 link: $obj.tag-link
-$loop$: $featured-post-card-mobile.tags as $obj
+$loop$: $featured-post-article-mobile.tags as $obj
 style: light
 color: $inherited.colors.text
 
--- ftd.text: $featured-post-card-mobile.title
+-- ftd.text: $featured-post-article-mobile.title
 role: $inherited.types.heading-tiny
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { featured-post-card-mobile.body != NULL }
+if: { featured-post-article-mobile.body != NULL }
 role: $inherited.types.copy-regular
 
-$featured-post-card-mobile.body
+$featured-post-article-mobile.body
 
 -- ftd.row:
 spacing.fixed.px: 5
 role: $inherited.types.copy-small
 
--- ftd.text: $featured-post-card-mobile.posted-on
+-- ftd.text: $featured-post-article-mobile.posted-on
 
--- ftd.text: $featured-post-card-mobile.timestamp
+-- ftd.text: $featured-post-article-mobile.timestamp
 
 -- end: ftd.row
 
 -- ftd.row:
 border-bottom-width.px: 1
 border-color: $inherited.colors.text-strong
-width.fixed.percent if { !featured-post-card-mobile.mouse-in} : 10
-width.fixed.percent if { featured-post-card-mobile.mouse-in} : 20
+width.fixed.percent if { !featured-post-article-mobile.mouse-in} : 10
+width.fixed.percent if { featured-post-article-mobile.mouse-in} : 20
 padding-bottom.px: 4
-link if { featured-post-card-mobile.cta-primary != NULL }: $featured-post-card-mobile.cta-primary-url
+link if { featured-post-article-mobile.cta-primary != NULL }: $featured-post-article-mobile.cta-primary-url
 
--- ftd.text: $featured-post-card-mobile.cta-primary
+-- ftd.text: $featured-post-article-mobile.cta-primary
+if: { featured-post-article-mobile.cta-primary != NULL }
 role: $inherited.types.link
 white-space: nowrap
 color: $inherited.colors.text-strong
-$on-mouse-enter$: $ftd.set-bool($a = $featured-post-card-mobile.mouse-in, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $featured-post-card-mobile.mouse-in, v = false)
+$on-mouse-enter$: $ftd.set-bool($a = $featured-post-article-mobile.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $featured-post-article-mobile.mouse-in, v = false)
 
 -- end: ftd.row
 
 -- end: ftd.column
 
--- end: featured-post-card-mobile
+-- end: featured-post-article-mobile
 
 
 
@@ -1248,20 +1253,18 @@ children: $article-card-mobile.right-sidebar
 
 
 
--- component post-card:
+-- component post-article:
 common.post-meta post-data:
 
--- post-card-ui: $post-card.post-data.title
-timestamp: $post-card.post-data.published-on
-image: $post-card.post-data.post-image
-author: $post-card.post-data.author
-url: $post-card.post-data.post-url
-body: $post-card.post-data.body
-tags: $post-card.post-data.tags
+-- post-article-ui: $post-article.post-data.title
+timestamp: $post-article.post-data.published-on
+image: $post-article.post-data.post-image
+author: $post-article.post-data.author
+url: $post-article.post-data.post-url
+body: $post-article.post-data.body
+tags: $post-article.post-data.tags
 
--- end: post-card
-
-
+-- end: post-article
 
 
 
@@ -1270,7 +1273,9 @@ tags: $post-card.post-data.tags
 
 
 
--- component post-card-ui:
+
+
+-- component post-article-ui:
 caption title:
 string timestamp:
 common.author-meta author:
@@ -1286,9 +1291,9 @@ string posted-on: on
 -- ftd.column:
 width: fill-container
 margin-bottom.px: 22
-$on-mouse-enter$: $ftd.set-bool($a = $post-card-ui.hover, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $post-card-ui.hover, v = false)
-background.solid if { post-card-ui.hover }: $inherited.colors.background.step-1
+$on-mouse-enter$: $ftd.set-bool($a = $post-article-ui.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $post-article-ui.hover, v = false)
+background.solid if { post-article-ui.hover }: $inherited.colors.background.step-1
 border-width.px: 1
 border-radius.px: 12
 padding-vertical.px: 24
@@ -1302,26 +1307,26 @@ width: fill-container
 -- ftd.text: $obj.title
 role: $inherited.types.copy-regular
 link: $obj.tag-link
-$loop$: $post-card-ui.tags as $obj
+$loop$: $post-article-ui.tags as $obj
 style: light
 color: $inherited.colors.text
 
 -- end: ftd.row
 
--- ftd.text: $post-card-ui.title
+-- ftd.text: $post-article-ui.title
 color: $inherited.colors.text-strong
 role: $inherited.types.copy-large
 style: medium
 margin-top.px: 8
-link: $post-card-ui.url
+link: $post-article-ui.url
 
--- ftd.text: $post-card-ui.timestamp
+-- ftd.text: $post-article-ui.timestamp
 role: $inherited.types.copy-regular
 style: light
 
 -- ftd.image:
-if: { post-card-ui.image != NULL}
-src: $post-card-ui.image
+if: { post-article-ui.image != NULL}
+src: $post-article-ui.image
 width: fill-container
 height: hug-content
 margin-top.px: 24
@@ -1329,7 +1334,7 @@ border-radius.px: 12
 
 -- end: ftd.column
 
--- end: post-card-ui
+-- end: post-article-ui
 
 
 
@@ -1621,3 +1626,147 @@ role: $inherited.types.fine-print
 
 -- end: author-bio-mobile
 
+
+
+
+
+
+
+
+
+-- component topic:
+caption title:
+common.tags-list list topics:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- topic-desktop: $topic.title
+topics: $topic.topics
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- topic-mobile: $topic.title
+topics: $topic.topics
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: topic
+
+
+
+
+
+
+
+
+
+
+-- component topic-desktop:
+caption title:
+common.tags-list list topics:
+
+-- ftd.column:
+padding-vertical.px: 8
+width: fill-container
+spacing.fixed.px: 12
+
+-- ftd.text: $topic-desktop.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+style: semi-bold
+
+-- ftd.row:
+spacing.fixed.px: 16
+wrap: true
+align-content: center
+
+-- topics-detail:
+$loop$: $topic-desktop.topics as $obj
+title: $obj.title
+tag-link: $obj.tag-link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: topic-desktop
+
+
+
+
+
+
+
+
+
+
+-- component topic-mobile:
+caption title:
+common.tags-list list topics:
+
+-- ftd.column:
+padding-vertical.px: 8
+width: fill-container
+spacing.fixed.px: 24
+
+-- ftd.text: $topic-mobile.title
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+
+-- ftd.row:
+spacing.fixed.px: 16
+wrap: true
+
+-- topics-detail:
+$loop$: $topic-mobile.topics as $obj
+title: $obj.title
+tag-link: $obj.tag-link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: topic-mobile
+
+
+
+
+
+
+
+
+
+
+-- component topics-detail:
+caption title:
+string tag-link:
+boolean $mouse-in: false
+
+-- ftd.row:
+spacing.fixed.px: 32
+background.solid: $inherited.colors.background.step-1
+background.solid if { topics-detail.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $topics-detail.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $topics-detail.mouse-in, v = false)
+height: hug-content
+border-radius.px: 30
+padding-vertical.px: 12
+padding-horizontal.px: 12
+
+-- ftd.text: $topics-detail.title
+role: $inherited.types.copy-small
+color: $inherited.colors.cta-primary.text
+color if { topics-detail.mouse-in }: $inherited.colors.text-strong
+link: $topics-detail.tag-link
+style: semi-bold
+
+-- end: ftd.row
+
+-- end: topics-detail

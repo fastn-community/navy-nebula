@@ -1,0 +1,68 @@
+-- import: fastn-community.github.io/navy-nebula/components
+-- import: fastn-community.github.io/navy-nebula/blog-articles/sample-post 
+
+-- ds.page: featured-post
+document-title: fastn blog Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use navy-nebula template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn-community.github.io/navy-nebula/-/fastn-community.github.io/navy-nebula/assets/navy-nebula-og-image.jpg
+sidebar: true
+
+-- ds.page.right-sidebar:
+
+-- components.sidebar-index:
+
+-- end: ds.page.right-sidebar
+
+-- ds.page.body:
+
+`ds.featured-post` can be used to show blog/article meta as a featured-post.
+To see it in action - [Click here](index.html).
+
+-- ds.h2: Example:
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- common.post-meta meta: Lorem ipsum dolor sit amet. Est voluptatem esse
+tag: Lorem ipsum
+author: $author.patrica
+published-on: May 18, 6 min
+post-image: $assets.files.assets.featured-1.jpg
+post-url: blog-articles/sample-post/
+
+\-- ds.featured-post:
+post-data: $sample-post.meta
+
+-- ds.rendered.output:
+
+-- ds.featured-post:
+post-data: $sample-post.meta-2
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- ds.code:
+lang: ftd
+
+\-- ds.featured-post:
+post-data: $sample-post.meta
+
+-- ds.h3: Properties of `featured-post` component
+
+- **post-data** - `type: record` use `common.post-meta` record to create
+    featured post of your blog post as shown in below code snippet. 
+    To see it in featured posts page - [Click here](index.html).
+
+-- ds.code:
+lang: ftd
+
+\-- common.post-meta meta: Lorem ipsum dolor sit amet. Est voluptatem esse
+tag: Lorem ipsum
+author: $author.patrica
+published-on: May 18, 6 min
+post-image: $assets.files.assets.featured-1.jpg
+post-url: blog-articles/sample-post/
+
+-- end: ds.page
